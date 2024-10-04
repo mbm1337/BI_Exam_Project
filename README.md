@@ -1,31 +1,38 @@
 # Assessing Job Automation Risk in the AI Era
 
-Context: While continuously improving, AI technologies create a rise in the automation of job roles, 
-and those that are mainly repetitive or routine in nature. 
-However, there are differences in the level of risk concerning automation across industries and job types. 
-Moreover, understanding which jobs are most at risk due to automation and 
-finding the skills that protect employees from becoming obsolete is significant for individuals and business entities in the labor market.
+## Project Annotation
+This project focuses on analyzing the risks posed by AI-driven automation to job roles in various sectors. 
+By using the "AI-powered Job Market Insights" dataset, the project aims to identify which jobs are most at risk of being automated,
+understand the impact of automation across industries, and determine the skills that will remain relevant or grow in demand. 
+The expected solution will guide job seekers, employers, and policymakers in navigating the challenges and opportunities presented by AI. 
+This solution could positively impact workers by helping them future-proof their careers through upskilling,
+while also assisting businesses in strategic workforce planning.
 
-Overview: The objective is to develop a BI and AI-powered solution that performs an analysis on the job automation potential risk across various industries. It is aimed to be working out which job role would have most vulnerability to automation and assess how AI creates opportunities for new roles, while also creating risk for traditional jobs. It will update this solution on the kinds of skills that are in demand and also propose strategies that could be laid down for individuals and companies to reduce the risks from automation.
+## Context and Purpose
+- **Context:** As AI technologies advance, many jobs—especially those involving repetitive tasks—are at risk of automation. This project aims to assess which roles are most vulnerable and provide insights for mitigating the risks.
+- **Purpose:** To develop a BI solution that analyzes job automation risk and suggests the skills needed to stay relevant in an AI-driven economy.
 
-#### Research Questions:
+## Research Questions
+1. Which job roles are most susceptible to automation in the current market?
+2. How does AI-driven automation impact specific industries and job functions?
+3. What skills will be in high demand due to the automation of existing jobs?
+4. How can workers adapt to the growing influence of AI on the labor market?
 
-* Which job roles are most susceptible to automation in the current market?
-* How does AI-driven automation affect specific industries and job functions?
-* What skills will be highly demanded as a result of the automation of existing jobs?
-* How will workers adapt to an increasingly influential presence of AI in the labor market? 
+## Hypotheses
+1. Jobs involving repetitive or predictable tasks are at the highest risk of being automated by AI technologies.
+2. Industries such as manufacturing, transportation, and administrative services face greater automation risks compared to creative and complex problem-solving roles.
+3. Skills related to AI, machine learning, data analysis, and creative problem-solving will see increased demand.
+4. Workers who focus on acquiring technical and cognitive skills will be better prepared to thrive in an AI-dominated job market.
 
-### Hypotheses:
+## Development Plan
+- **Timeline:** 4 Sprints with specific milestones and deliverables
+- **Tools:** GitHub, Jupyter Notebooks, Python (pandas, scikit-learn), Tableau/Power BI
+- **Team:** Project Manager, Data Scientists, BI Analysts, IT Specialist, Developers
 
-Those jobs that are monotonous or predictably repetitive would face the most likelihood of automation through AI-related technologies.
-Manufacturing, transport, and administrative support are more vulnerable than creation and problem-solving.
-The demand for skills in AI, machine learning, data analysis, and creative problem-solving will rise.
-Among the workers, those who focus on developing their technical and cognitive skills will be more prepared to thrive in an AI-driven job market.
+## Milestones
+1. **Sprint 1:** Problem Formulation
+2. **Sprint 2:** Data Preparation
+3. **Sprint 3:** Data Modeling
+4. **Sprint 4:** Usability Evaluation
 
-The project analyzes the risks that AI-driven automation can pose to jobs within various industries. 
-Through the use of the "AI-powered Job Market Insights" dataset, the project tries to answer what jobs are at risk from automation,
-what the impact of automation across industries is, and what skills will be relevant or grow in demand. 
-The solution expected will guide job seekers, employers, and policymakers on how to navigate through challenges and opportunities brought about by AI. 
-The impact will be felt among workers as it will help them future-proof their careers through reskilling, while among businesses, 
-it aids in strategic workforce planning.
 
