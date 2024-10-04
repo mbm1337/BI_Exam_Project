@@ -24,15 +24,6 @@ while also assisting businesses in strategic workforce planning.
 3. Skills related to AI, machine learning, data analysis, and creative problem-solving will see increased demand.
 4. Workers who focus on acquiring technical and cognitive skills will be better prepared to thrive in an AI-dominated job market.
 
-## Development Plan
-- **Timeline:** 4 Sprints with specific milestones and deliverables
-- **Tools:** GitHub, Jupyter Notebooks, Python (pandas, scikit-learn), Tableau/Power BI
-- **Team:** Project Manager, Data Scientists, BI Analysts, IT Specialist, Developers
 
-## Milestones
-1. **Sprint 1:** Problem Formulation
-2. **Sprint 2:** Data Preparation
-3. **Sprint 3:** Data Modeling
-4. **Sprint 4:** Usability Evaluation
 
 
