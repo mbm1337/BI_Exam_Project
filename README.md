@@ -18,3 +18,10 @@ Manufacturing, transport, and administrative support are more vulnerable than cr
 The demand for skills in AI, machine learning, data analysis, and creative problem-solving will rise.
 Among the workers, those who focus on developing their technical and cognitive skills will be more prepared to thrive in an AI-driven job market.
 
+The project analyzes the risks that AI-driven automation can pose to jobs within various industries. 
+Through the use of the "AI-powered Job Market Insights" dataset, the project tries to answer what jobs are at risk from automation,
+what the impact of automation across industries is, and what skills will be relevant or grow in demand. 
+The solution expected will guide job seekers, employers, and policymakers on how to navigate through challenges and opportunities brought about by AI. 
+The impact will be felt among workers as it will help them future-proof their careers through reskilling, while among businesses, 
+it aids in strategic workforce planning.
+
