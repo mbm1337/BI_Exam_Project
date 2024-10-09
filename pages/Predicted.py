@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, classification_report
 
 # Indlæs data fra den uploadede CSV-fil
-df = pd.read_csv('Data/ai_job_market_insights.csv')
+df = pd.read_csv('data/ai_job_market_insights.csv')
 
 # Håndter NaN og numeriske værdier
 df['Salary_USD'] = pd.to_numeric(df['Salary_USD'], errors='coerce')
