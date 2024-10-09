@@ -1,4 +1,18 @@
 # Design Home Page
+# Function to install packages
+def install_packages():
+    try:
+        import pandas
+        import numpy
+        import seaborn
+        import sklearn
+        import matplotlib
+    except ImportError:
+        print("Installing required packages...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+
+# Run the function to install packages
+install_packages()
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
