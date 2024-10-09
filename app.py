@@ -3,15 +3,17 @@ import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
-from streamlit_option_menu import option_menu
 
-import json
-import requests
-import pandas as pd
-import numpy as np
+try:
+    import pandas
+    import numpy
+    import seaborn
+    import sklearn
+    import matplotlib
+except ImportError:
+    print("Installing required packages...")
+    os.system("pip install pandas numpy seaborn scikit-learn matplotlib")
 
-
-from io import StringIO
 from PIL import Image
 logo = Image.open('./media/logo.png')
 
