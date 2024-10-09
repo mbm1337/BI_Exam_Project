@@ -8,18 +8,13 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
 
-def install_packages():
-    try:
-        import pandas
-        import numpy
-        import seaborn
-        import sklearn
-        import matplotlib
-    except ImportError:
-        print("Installing required packages...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
-install_packages()
+
 
 import streamlit as st
 
