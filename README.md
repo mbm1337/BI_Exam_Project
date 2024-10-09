@@ -25,5 +25,7 @@ while also assisting businesses in strategic workforce planning.
 4. Workers who focus on acquiring technical and cognitive skills will be better prepared to thrive in an AI-dominated job market.
 
 
+Streamli link: https://bi-exam-project.streamlit.app/
+
 
 
