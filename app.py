@@ -19,23 +19,12 @@ def install_packages():
         print("Installing required packages...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 
-from PIL import Image
-logo = Image.open('./media/logo.png')
+install_packages()
 
-st.set_page_config(
-    page_title="Streamlit BI Demo",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'mailto:tdi@cphbusiness.dk',
-        'About': "https://docs.streamlit.io"
-    }
-)
+import streamlit as st
 
-st.sidebar.header("Try Me!", divider='rainbow')
-# st.sidebar.success("Select a demo case from above")
-st.image(logo, width=200)
+
+
 
 banner = """
     <body style="background-color:yellow;">
