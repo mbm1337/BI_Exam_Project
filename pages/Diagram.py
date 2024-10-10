@@ -7,6 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.model_selection import train_test_split
 
+
 # Load data
 df = pd.read_csv('data/ai_job_market_insights.csv')
 
@@ -87,14 +88,26 @@ st.write("""
 Nedenfor er en visualisering af en DecisionTreeClassifier, der er trænet på datasættet. Dette træ viser, hvordan beslutninger træffes baseret på forskellige funktioner i datasættet.
 """)
 
-# Drop rows where 'Automation_Risk' is NaN
-df = df.dropna(subset=['Automation_Risk'])
+# List of categorical columns
+categorical_columns = ['Job_Title', 'Industry', 'Company_Size', 'Location',
+                       'AI_Adoption_Level', 'Automation_Risk', 'Required_Skills',
+                       'Remote_Friendly', 'Job_Growth_Projection']
+
+# Create a copy of the dataframe to encode
+df_encoded = df.copy()
+
+# Initialize LabelEncoder
+le = LabelEncoder()
+
+# Encode each categorical column
+for col in categorical_columns:
+    df_encoded[col] = le.fit_transform(df_encoded[col])
 
 # Define target variable y
-y = df['Automation_Risk']
+y = df_encoded['Automation_Risk']
 
 # Define feature variables X
-X = df.drop('Automation_Risk', axis=1)
+X = df_encoded.drop('Automation_Risk', axis=1)
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
