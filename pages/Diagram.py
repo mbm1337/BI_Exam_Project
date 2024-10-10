@@ -1,9 +1,10 @@
 # Import necessary libraries
-import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.model_selection import train_test_split
 
 # Load data
 df = pd.read_csv('data/ai_job_market_insights.csv')
@@ -42,7 +43,7 @@ st.pyplot(plt)
 # Visualize the count of Job Titles
 st.write("### Count of Job Titles")
 st.write("""
-Dette diagram viser antallet af jobtitler i datasættet. Det hjælper os med at se, hvilke jobtitler der er mest almindelige, og giver et overblik over mangfoldigheden af roller på markedet.
+Dette diagram viser antallet af jobtitler i datasættet. Det hjælper os med at se, hvilke jobtitler der er mest almindelige , og giver et overblik over mangfoldigheden af roller på markedet.
 """)
 plt.figure(figsize=(12, 8))
 sns.countplot(y='Job_Title', data=df, order=df['Job_Title'].value_counts().index)
@@ -78,3 +79,30 @@ st.write("""
 Dette heatmap hjælper med at identificere sammenhænge mellem faktorer som løn, automatiseringsrisiko, 
 AI-adoption, og andre variabler i AI-jobmarkedet. Det kan f.eks. afsløre, om højere løn er forbundet med højere eller lavere automatiseringsrisiko.
 """)
+
+# Train and visualize DecisionTreeClassifier
+st.write("### Decision Tree Classifier Visualization")
+st.write("""
+Nedenfor er en visualisering af en DecisionTreeClassifier, der er trænet på datasættet. Dette træ viser, hvordan beslutninger træffes baseret på forskellige funktioner i datasættet.
+""")
+
+# Drop rows where 'Automation_Risk' is NaN
+df = df.dropna(subset=['Automation_Risk'])
+
+# Define target variable y
+y = df['Automation_Risk']
+
+# Define feature variables X
+X = df.drop('Automation_Risk', axis=1)
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train a DecisionTreeClassifier
+clf = DecisionTreeClassifier(random_state=7)
+clf.fit(X_train, y_train)
+
+# Visualize the tree
+plt.figure(figsize=(20, 10))
+plot_tree(clf, filled=True, feature_names=X.columns, class_names=True, rounded=True)
+st.pyplot(plt)
